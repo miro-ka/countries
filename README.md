@@ -1,6 +1,6 @@
 # countries
 
-Simple countries json data fetch and data-visualization.
+A simple program to fetch and visualize restcountries.eu data.
 
 ![Countries Dashboard](dashboard.png?raw=true "Countries Dashboard")
 
