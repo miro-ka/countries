@@ -1,5 +1,12 @@
 # countries
 
+Simple countries json data fetch and data-visualization.
+
+![Countries Dashboard](dashboard.png?raw=true "Countries Dashboard")
+
+[Dashboard Link](https://datastudio.google.com/reporting/1d0aa20a-c7aa-45ad-ae70-8d6bb1eacfd6)
+
+
 ## About
 Simple program for:
  1. Fetching countries json from public [https://restcountries.eu](https://restcountries.eu)
