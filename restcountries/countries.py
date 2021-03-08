@@ -37,14 +37,16 @@ class Countries:
             raise SystemExit(e)
 
     @staticmethod
-    def preprocess(df):
+    def parse(df):
         """
         Basic data cleaning and preprocessing
         :param df: countries df
         :return: tuple (cleaned_countries, languages)
         """
         # Format the area in square miles, without decimals (example, for Norway “125020”)
-        df['area'].fillna(0.0).apply(countries_utils.km2_to_miles2).astype(int)
+        df['area'] = df['area'].fillna(0.0).apply(countries_utils.km2_to_miles2).astype(int)
 
         # Format the population in millions with one decimal (example, for Norway “5.2”)
-        df['population'].fillna(0.0).apply(lambda x: x / 1000000).round(1)
+        df['population'] = df['population'].fillna(0.0).apply(lambda x: x / 1000000).round(1)
+
+        return df

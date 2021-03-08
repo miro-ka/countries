@@ -16,6 +16,8 @@ def run(args):
     query_time = round((time.time()-start_time), 2)
     logging.info("Countries fetched in (sec): " + str(query_time))
 
+    countries_df = Countries.parse(countries_df)
+
     # Return or upload to BQ
     if args.bq_upload:
         bq_dest_table = args.bq_dest
